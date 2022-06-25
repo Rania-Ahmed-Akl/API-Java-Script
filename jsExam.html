@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css ">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jsExamStyle.css">
+</head>
+<body>
+    <!-- ********************************************************************************* -->
+<!-- N  A  V  B  A  R -->
+    <div id="verticalNavbar" class="verticalNavbar bg-dark position-fixed ">
+        <div class="d-none" id="navbarToggleExternalContent">
+            <div class=" p-4">
+              <ul>
+                <li class="mb-3"><a href="" class="text-white text-decoration-none">Now Playing</a></li>
+                <li class="mb-3"><a href="" class="text-white text-decoration-none">Popular</a></li>
+                <li class="mb-3"><a href="" class="text-white text-decoration-none">Top Rated</a></li>
+                <li class="mb-3"><a href="" class="text-white text-decoration-none">Trending</a></li>
+                <li class="mb-3"><a href="" class="text-white text-decoration-none">UpComing</a></li>
+                <li class="mb-3"><a href="#ContactUs" class="text-white text-decoration-none">Contact Us</a></li>
+              </ul>
+              <div class="icons mb-3 d-flex justify-content-around mt-5 mb-5">
+                <i class="fa-brands fa-facebook text-white"></i>
+                <i class="fa-brands fa-twitter text-white"></i>
+                <i class="fa-solid fa-globe text-white"></i>
+              </div>
+    
+              <span class="text-muted">Copyright Â© 2019 All Rights Reserved.</span>
+            </div>
+          </div>
+          <nav id="navbar" class="navbar navbar-light bg-light ">
+            <img src="img/logo.png" class="w-100 ps-3 pe-3">
+            <div class="container-fluid">
+              <button id="navbarTogglerIcon" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span id="spanButton" class="navbar-toggler-icon"></span>
+                <i id="closeIcon" class="fa-solid fa-xmark fa-2x m-auto d-none"></i>
+
+              </button>
+              
+            </div>
+            <div class="iconsNavbar d-flex flex-column m-auto">
+              <i class="fa-solid fa-globe mb-4 "></i>
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+          </nav>
+    </div>
+<!-- ********************************************************************************* -->
+<!-- U  S  E  R    S  E  A  R  C  H  -->
+<section>
+    <div class="container p-5 d-flex justify-content-around">
+        <input onkeyup="SearchByWord()" class="w-75 mt-3 mb-3 ps-3 bg-black fw-bold rounded p-2 text-white" type="text" placeholder="Get Movies By Word" name="" id="inputElement">
+    </div>
+</section>
+
+<!-- ********************************************************************************* -->
+<!-- D  I  S  P  L  A  Y    M  O  V  I  E  S   -->
+<section>
+    <div class="container p-5">
+        <div id="imgSrc" class="row gy-4 py-4 text-center">
+
+        </div>
+    </div>
+</section>
+
+<!-- ********************************************************************************* -->
+<!-- F  O  O  T  E  R -->
+<footer id="ContactUs">
+    <div class="container p-5">
+        <h2 class="text-white">Contact Us ...</h2>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input onkeyup="validateUserName()" class="mt-3 mb-3 ps-3 bg-black fw-bold w-100 rounded p-2 text-white" type="text" placeholder="Enter Your Name" name="" id="userName">
+                <div id="userNameWarning" class="d-none bg-danger rounded p-2">
+                    Your Name is Not Valid
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input onkeyup="validateUserEmail()" class="mt-3 mb-3 ps-3 bg-black fw-bold w-100 rounded p-2 text-white" type="email" placeholder="Enter Email" name="" id="userEmail">
+                <div id="userEmailWarning" class="d-none bg-danger rounded p-2">
+                    Enter Valid Email
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input onkeyup="validateUserPhone()" class="mt-3 mb-3 ps-3 bg-black fw-bold w-100 rounded p-2 text-white" type="number" placeholder="Enter Phone" name="" id="userPhone">
+                <div id="userPhoneWarning" class="d-none bg-danger rounded p-2">
+                    Enter Valid Phone
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input onkeyup="validateUserAge()" class="mt-3 mb-3 ps-3 bg-black fw-bold w-100 rounded p-2 text-white" type="number" placeholder="Enter Age" name="" id="userAge">
+                <div id="userAgeWarning" class="d-none bg-danger rounded p-2">
+                    Enter Valid Age
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input onkeyup="validateUserPassword()" class="mt-3 mb-3 ps-3 bg-black fw-bold w-100 rounded p-2 text-white" type="password" placeholder="Enter Password" name="" id="userPassword">
+                <div id="userPasswordWarning" class="d-none bg-danger rounded p-2">
+                    Enter valid password *Minimum eight characters, at least one letter and one number:*
+                </div>
+            </div>
+            <div class="col-md-6">
+                <input onkeyup="validateUserRepassword()" class="mt-3 mb-3 ps-3 bg-black fw-bold w-100 rounded p-2 text-white" type="password" placeholder="Enter Repassword" name="" id="userRepassword">
+                <div id="userRepasswordWarning" class="d-none bg-danger rounded p-2">
+                    Enter Valid Repassword
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-black text-white border-danger  ">Submit</button>
+
+    </div>
+</footer>
+    
+    <script src="bootstrap.min.js"></script>
+    <script src="jsExam.js"></script>
+</body>
+</html>
